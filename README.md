@@ -36,3 +36,9 @@
 
 > [!NOTE]
 > 一旦 DB まわりは構築せずにモックデータで実装する
+
+### リンク
+
+- [Figma](https://www.figma.com/community/file/1585467606625575490)
+- [Storybook](https://www.chromatic.com/library?appId=694a362f0c20bb548f0215b2)
+- [Page](https://lateen-sail.github.io/reread/)
