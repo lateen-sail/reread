@@ -1,4 +1,6 @@
-# Reread
+
+![LogoText](https://github.com/user-attachments/assets/173574b0-9562-4a1d-8c1e-0ca472dc3751)
+
 
 ## 概要
 
