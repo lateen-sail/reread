@@ -90,3 +90,48 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  /* body text */
+  .text-body-xs {
+    @apply text-xs leading-[1.3] tracking-[0.04em];
+  }
+
+  .text-body-sm {
+    @apply text-sm leading-[1.4] tracking-[0.04em];
+  }
+
+  .text-body-base {
+    @apply text-base leading-[1.4] tracking-[0.04em];
+  }
+
+  .text-body-lg {
+    @apply text-lg leading-[1.4] tracking-[0.04em];
+  }
+
+  .text-body-xl {
+    @apply text-xl leading-[1.4] tracking-[0.04em];
+  }
+
+  /* heading */
+  .text-heading-2xl {
+    @apply text-2xl leading-[1.3] tracking-[0.04em];
+  }
+
+  .text-heading-3xl {
+    @apply text-3xl leading-[1.3] tracking-[0.04em];
+  }
+
+  /* English text */
+  .text-en-lg {
+    @apply text-lg leading-[1] tracking-[0.02em];
+  }
+
+  .text-en-xl {
+    @apply text-xl leading-[1] tracking-[0.02em];
+  }
+
+  .text-en-2xl {
+    @apply text-2xl leading-[1] tracking-[0.02em];
+  }
+}
