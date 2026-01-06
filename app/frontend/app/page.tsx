@@ -13,8 +13,19 @@ import { BREAKPOINTS } from "@/constants/breakpoints";
 import Splide from "@splidejs/splide";
 import "@splidejs/splide/css";
 
-import HeroDesktop from "./images/lp/hero-main-desktop.png";
-import HeroMobile from "./images/lp/hero-main-mobile.png";
+import HeroDesktop from "./images/lp/hero-desktop.png";
+import HeroMobile from "./images/lp/hero-mobile.png";
+import ConceptDesktop from "./images/lp/concept-desktop.png";
+import ConceptMobile from "./images/lp/concept-mobile.png";
+import Features1Desktop from "./images/lp/features-1-desktop.jpg";
+import Features1Mobile from "./images/lp/features-1-mobile.jpg";
+import Features2Desktop from "./images/lp/features-2-desktop.jpg";
+import Features2Mobile from "./images/lp/features-2-mobile.jpg";
+import Features3Desktop from "./images/lp/features-3-desktop.jpg";
+import Features3Mobile from "./images/lp/features-3-mobile.jpg";
+import Features4Desktop from "./images/lp/features-4-desktop.jpg";
+import Features4Mobile from "./images/lp/features-4-mobile.jpg";
+import UiImage from "./images/lp/ui-image.png";
 
 export default function Home() {
   const splideRef = useRef<HTMLDivElement | null>(null);
@@ -158,12 +169,18 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <img
-                  src="https://placehold.jp/520x360.png"
-                  alt="机で本を開き、読書を記録する人物のイラスト"
-                  className="h-auto w-full max-w-[520px]"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    media={`(min-width: ${BREAKPOINTS.md}px)`}
+                    srcSet={ConceptDesktop.src}
+                  />
+                  <img
+                    src={ConceptMobile.src}
+                    alt="机で本を開き、読書を記録する人物のイラスト"
+                    className="h-auto w-full max-w-[520px]"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -180,23 +197,62 @@ export default function Home() {
             >
               <div className="splide__track overflow-hidden">
                 <ul className="splide__list">
-                  {[1, 2, 3, 4].map((n) => (
-                    <li key={`slide-${n}`} className="splide__slide">
-                      {/* Keep intrinsic/original image size */}
-                      <img
-                        src={`https://placehold.jp/400x300.png?text=Feature+${n}`}
-                        alt={`機能イメージ ${n}`}
-                        className="hidden h-auto w-auto max-w-none rounded-3xl ring-1 ring-zinc-200/60 md:block"
-                        loading="lazy"
+                  <li className="splide__slide">
+                    <picture>
+                      <source
+                        media={`(min-width: ${BREAKPOINTS.md}px)`}
+                        srcSet={Features1Desktop.src}
                       />
                       <img
-                        src={`https://placehold.jp/250x375.png?text=Feature+${n}`}
-                        alt={`機能イメージ ${n}`}
-                        className="block h-auto w-auto max-w-none rounded-3xl ring-1 ring-zinc-200/60 md:hidden"
+                        src={Features1Mobile.src}
+                        alt="機能イメージ"
+                        className="border border-border rounded-md max-w-[250px] md:max-w-none"
                         loading="lazy"
                       />
-                    </li>
-                  ))}
+                    </picture>
+                  </li>
+                  <li className="splide__slide">
+                    <picture>
+                      <source
+                        media={`(min-width: ${BREAKPOINTS.md}px)`}
+                        srcSet={Features2Desktop.src}
+                      />
+                      <img
+                        src={Features2Mobile.src}
+                        alt="機能イメージ"
+                        className="border border-border rounded-md max-w-[250px] md:max-w-none"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </li>
+                  <li className="splide__slide">
+                    <picture>
+                      <source
+                        media={`(min-width: ${BREAKPOINTS.md}px)`}
+                        srcSet={Features3Desktop.src}
+                      />
+                      <img
+                        src={Features3Mobile.src}
+                        alt="機能イメージ"
+                        className="border border-border rounded-md max-w-[250px] md:max-w-none"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </li>
+                  <li className="splide__slide">
+                    <picture>
+                      <source
+                        media={`(min-width: ${BREAKPOINTS.md}px)`}
+                        srcSet={Features4Desktop.src}
+                      />
+                      <img
+                        src={Features4Mobile.src}
+                        alt="機能イメージ"
+                        className="border border-border rounded-md max-w-[250px] md:max-w-none"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -336,15 +392,9 @@ export default function Home() {
 
             <div className="mt-12 flex flex-col items-center gap-6 md:flex-row md:justify-center md:gap-10">
               <img
-                src="https://placehold.jp/320x220.png"
+                src={UiImage.src}
                 alt="読書記録のカードUIのイメージ"
-                className="h-auto w-full max-w-[320px]"
-                loading="lazy"
-              />
-              <img
-                src="https://placehold.jp/300x260.png"
-                alt="読書記録一覧画面のイメージ"
-                className="h-auto w-full max-w-[300px]"
+                className="h-auto w-full max-w-[420px] mx-auto"
                 loading="lazy"
               />
             </div>
