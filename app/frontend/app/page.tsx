@@ -8,11 +8,13 @@ import {
   RefreshCcw,
   Sparkles,
 } from "lucide-react";
-import HeroDesktop from "./images/HeroDesktop.png";
-
 import UserLayout from "@/components/layout/UserLayout";
+import { BREAKPOINTS } from "@/constants/breakpoints";
 import Splide from "@splidejs/splide";
 import "@splidejs/splide/css";
+
+import HeroDesktop from "./images/lp/hero-main-desktop.png";
+import HeroMobile from "./images/lp/hero-main-mobile.png";
 
 export default function Home() {
   const splideRef = useRef<HTMLDivElement | null>(null);
@@ -82,12 +84,18 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <img
-                  src={HeroDesktop.src}
-                  alt="スマートフォンを見ながら本を読む人物のイラスト"
-                  className="h-auto w-full max-w-[520px]"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    media={`(min-width: ${BREAKPOINTS.md}px)`}
+                    srcSet={HeroDesktop.src}
+                  />
+                  <img
+                    src={HeroMobile.src}
+                    alt="スマートフォンを見ながら本を読む人物のイラスト"
+                    className="h-auto w-full max-w-[520px]"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>
