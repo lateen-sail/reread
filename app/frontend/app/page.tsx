@@ -8,6 +8,7 @@ import {
   RefreshCcw,
   Sparkles,
 } from "lucide-react";
+import HeroDesktop from "./images/HeroDesktop.png";
 
 import UserLayout from "@/components/layout/UserLayout";
 import Splide from "@splidejs/splide";
@@ -82,7 +83,7 @@ export default function Home() {
 
               <div className="flex justify-center md:justify-end">
                 <img
-                  src="https://placehold.jp/520x360.png"
+                  src={HeroDesktop.src}
                   alt="スマートフォンを見ながら本を読む人物のイラスト"
                   className="h-auto w-full max-w-[520px]"
                   loading="lazy"
