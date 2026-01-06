@@ -1,4 +1,4 @@
-![LogoText](https://github.com/user-attachments/assets/173574b0-9562-4a1d-8c1e-0ca472dc3751)
+![head](https://github.com/user-attachments/assets/52c5d33a-68b8-439b-b2e1-610ea7ad47b1)
 
 ## 概要
 
@@ -42,6 +42,7 @@
 
 ### リンク
 
-- [Figma](https://www.figma.com/community/file/1585467606625575490)
+- [Figma](https://www.figma.com/community/file/1589811773426731744)
+- [Behance](https://www.behance.net/gallery/241545989/Reread)
 - [Storybook](https://www.chromatic.com/library?appId=694a362f0c20bb548f0215b2)
 - [Page](https://lateen-sail.github.io/reread/)
