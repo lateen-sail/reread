@@ -22,28 +22,44 @@ const Button = ({
   className,
   ...props
 }: Props) => {
-  const variantClassName: Record<
+  const backgroundClassName: Record<
     NonNullable<ShadcnButtonProps["variant"]>,
     string
   > = {
-    default: "",
-    secondary: "",
-    destructive: "",
-    outline: "",
-    ghost: "",
-    link: "",
+    default:
+      "bg-button-primary-background hover:bg-button-primary-background/50 shadow-base",
+    secondary:
+      "bg-button-secondary-background hover:bg-button-secondary-background/50 shadow-base",
+    destructive:
+      "bg-button-destructive-background hover:bg-button-destructive-background/50 shadow-base",
+    outline:
+      "border-button-outline-foreground bg-background hover:bg-background/50",
+    ghost:
+      "bg-button-ghost-background hover:bg-button-ghost-background/50 shadow-base",
+    link: "border-button-link-foreground bg-background hover:bg-background/50",
+  };
+  const textClassName: Record<
+    NonNullable<ShadcnButtonProps["variant"]>,
+    string
+  > = {
+    default: "text-button-primary-foreground",
+    secondary: "text-button-secondary-foreground",
+    destructive: "text-button-destructive-foreground",
+    outline: "text-button-outline-foreground",
+    ghost: "text-button-ghost-foreground",
+    link: "text-button-link-foreground",
   };
 
   const sizeClassName: Record<
     NonNullable<ShadcnButtonProps["size"]>,
     string
   > = {
-    default: "",
-    sm: "",
-    lg: "",
-    icon: "",
-    "icon-sm": "",
-    "icon-lg": "",
+    default: "h-10 gap-1 px-4 py-1 text-body-base",
+    sm: "h-8 gap-1 px-3 py-1 text-body-sm",
+    lg: "h-12 gap-1 px-5 py-1 text-body-lg",
+    icon: "w-9 h-9",
+    "icon-sm": "w-6 h-6",
+    "icon-lg": "w-12 h-12",
   };
 
   const safeVariant = variant ?? "default";
@@ -58,15 +74,23 @@ const Button = ({
       aria-busy={loading || undefined}
       data-loading={loading ? "true" : undefined}
       className={cn(
-        loading ? "cursor-wait" : "",
-        variantClassName[variant ?? "default"],
+        loading && "cursor-wait",
+        "rounded-full font-bold",
+        backgroundClassName[variant ?? "default"],
         sizeClassName[size ?? "default"],
         className
       )}
       {...props}
     >
-      {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-      {label}
+      {loading && (
+        <Loader2
+          className={cn(
+            textClassName[variant ?? "default"],
+            "h-4 w-4 animate-spin"
+          )}
+        />
+      )}
+      <span className={cn(textClassName[variant ?? "default"])}>{label}</span>
     </ShadcnButton>
   );
 };

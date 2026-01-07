@@ -52,6 +52,18 @@
   --color-header-background: var(--header-background);
   --color-header-border: var(--header-border);
   --color-header-menu-background: var(--header-menu-background);
+
+  /* button */
+  --color-button-primary-background: var(--button-primary-background);
+  --color-button-primary-foreground: var(--button-primary-foreground);
+  --color-button-secondary-background: var(--button-secondary-background);
+  --color-button-secondary-foreground: var(--button-secondary-foreground);
+  --color-button-destructive-background: var(--button-destructive-background);
+  --color-button-destructive-foreground: var(--button-destructive-foreground);
+  --color-button-outline-foreground: var(--button-outline-foreground);
+  --color-button-ghost-background: var(--button-ghost-background);
+  --color-button-ghost-foreground: var(--button-ghost-foreground);
+  --color-button-link-foreground: var(--button-link-foreground);
 }
 :root {
   /* shadcn */
@@ -92,6 +104,18 @@
   --header-background: var(--neutral-50);
   --header-border: var(--neutral-300);
   --header-menu-background: var(--neutral-100);
+
+  /* button */
+  --button-primary-background: var(--yellow-800);
+  --button-primary-foreground: var(--neutral-50);
+  --button-secondary-background: var(--neutral-800);
+  --button-secondary-foreground: var(--neutral-50);
+  --button-destructive-background: var(--red-700);
+  --button-destructive-foreground: var(--neutral-50);
+  --button-outline-foreground: var(--neutral-800);
+  --button-ghost-background: var(--neutral-800);
+  --button-ghost-foreground: var(--neutral-300);
+  --button-link-foreground: var(--neutral-600);
 }
 
 @layer base {
