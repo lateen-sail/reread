@@ -147,3 +147,9 @@
     @apply text-2xl leading-[1] tracking-[0.02em];
   }
 }
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
