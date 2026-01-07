@@ -44,5 +44,5 @@
 
 - [Figma](https://www.figma.com/community/file/1589811773426731744)
 - [Behance](https://www.behance.net/gallery/241545989/Reread)
-- [Storybook](https://www.chromatic.com/library?appId=694a362f0c20bb548f0215b2)
+- [Storybook](https://694a362f0c20bb548f0215b2-tgyptunwyt.chromatic.com)
 - [Page](https://lateen-sail.github.io/reread/)
