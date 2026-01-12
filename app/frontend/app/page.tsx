@@ -115,8 +115,9 @@ export default function Home() {
               自分の変化に気づかせる
             </p>
             <div className="hidden md:flex gap-4">
-              <Button label="マイ本棚を利用する" size="lg" />
-              <Button label="サンプルを見る" variant="outline" size="lg" />
+              <Link href="/signup">
+                <Button label="今すぐはじめる" size="lg" />
+              </Link>
             </div>
           </div>
           <picture className="md:w-0 grow-3">
@@ -455,7 +456,9 @@ export default function Home() {
             読書を、あなたの生活の一部に。
           </p>
 
-          <Button label="今すぐはじめる" size="lg" />
+          <Link href="/signup">
+            <Button label="今すぐはじめる" size="lg" />
+          </Link>
         </section>
       </main>
     </UserLayout>
