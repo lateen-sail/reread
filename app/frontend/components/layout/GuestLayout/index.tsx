@@ -10,9 +10,13 @@ type Props = {
 const GuestLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <Header />
-      {children}
-      <Footer />
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <div className="grow flex flex-col items-center justify-center px-5 pt-28 pb-20">
+          {children}
+        </div>
+        <Footer />
+      </div>
     </>
   );
 };

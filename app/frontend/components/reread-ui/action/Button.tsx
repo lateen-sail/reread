@@ -54,9 +54,9 @@ const Button = ({
     NonNullable<ShadcnButtonProps["size"]>,
     string
   > = {
-    default: "h-10 gap-1 px-4 py-1 text-body-base",
-    sm: "h-8 gap-1 px-3 py-1 text-body-sm",
-    lg: "h-12 gap-1 px-5 py-1 text-body-lg",
+    default: "h-10 gap-1 px-4 py-1 text-body-base font-bold",
+    sm: "h-8 gap-1 px-3 py-1 text-body-sm font-bold",
+    lg: "h-12 gap-1 px-5 py-1 text-body-lg font-bold",
     icon: "w-9 h-9",
     "icon-sm": "w-6 h-6",
     "icon-lg": "w-12 h-12",
@@ -75,7 +75,7 @@ const Button = ({
       data-loading={loading ? "true" : undefined}
       className={cn(
         loading && "cursor-wait",
-        "rounded-full font-bold",
+        "rounded-full",
         backgroundClassName[variant ?? "default"],
         sizeClassName[size ?? "default"],
         className

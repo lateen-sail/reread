@@ -67,9 +67,7 @@ const InputPassword = ({
           aria-invalid={hasError || props["aria-invalid"] || undefined}
           aria-describedby={describedBy || props["aria-describedby"]}
           className={cn(
-            "pr-10",
-            hasError &&
-              "border-destructive focus-visible:ring-destructive/30 focus-visible:border-destructive",
+            "pr-10  px-3 h-12",
             disabled && "opacity-50",
             !disabled && "disabled:opacity-50"
           )}

@@ -16,7 +16,7 @@ const CardHeader: React.FC<CardHeaderProps> = ({
     <div className="flex flex-col items-center text-center gap-4">
       {subtitle && <p className="opacity-30">{subtitle}</p>}
       <h4 className="text-heading-2xl font-bold">{title}</h4>
-      {description && <p className="text-body-sm">{description}</p>}
+      {description && <p className="text-body-sm font-bold">{description}</p>}
     </div>
   );
 };

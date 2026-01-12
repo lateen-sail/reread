@@ -48,7 +48,13 @@ const InputOTP = ({
               <InputOTPGroup>
                 {Array.from({ length: end - start }).map((_, i) => {
                   const index = start + i;
-                  return <InputOTPSlot key={index} index={index} />;
+                  return (
+                    <InputOTPSlot
+                      key={index}
+                      index={index}
+                      className="w-12 h-14 flex items-center justify-center text-en-2xl text-2xl"
+                    />
+                  );
                 })}
               </InputOTPGroup>
 
