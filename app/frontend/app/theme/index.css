@@ -8,6 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans-jp);
+  --font-roboto: var(--font-roboto);
   --font-arial: "Arial";
 
   /* shadcn */
@@ -160,15 +161,15 @@
 
   /* English text */
   .text-en-lg {
-    @apply text-lg leading-[1] tracking-[0.02em];
+    @apply text-lg leading-[1] tracking-[0.02em] font-[var(--font-roboto)];
   }
 
   .text-en-xl {
-    @apply text-xl leading-[1] tracking-[0.02em];
+    @apply text-xl leading-[1] tracking-[0.02em] font-[var(--font-roboto)];
   }
 
   .text-en-2xl {
-    @apply text-2xl leading-[1] tracking-[0.02em];
+    @apply text-2xl leading-[1] tracking-[0.02em] font-[var(--font-roboto)];
   }
 }
 @layer base {

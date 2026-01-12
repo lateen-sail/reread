@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Noto_Sans_JP, Roboto } from "next/font/google";
 import "./theme/index.css";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-sans-jp",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -21,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
-      <body className={`${notoSansJP.variable} antialiased`}>{children}</body>
+      <body className={`${notoSansJP.variable} ${roboto.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
