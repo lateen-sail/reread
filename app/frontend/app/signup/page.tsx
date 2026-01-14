@@ -10,8 +10,59 @@ import Button from "@/components/reread-ui/action/Button";
 import { SignupStep, SignupData } from "./types";
 
 const SignupPage: React.FC = () => {
-  const { step, data, errors, handleChange, handleNext, handleSubmit } =
-    useSignup();
+  const {
+    step,
+    data,
+    errors,
+    loading,
+    handleChange,
+    handleNext,
+    handleSubmit,
+  } = useSignup();
+
+  const loadingView = () => {
+    if (!loading) return null;
+    return (
+      <>
+        <span className="absolute top-0 left-0 z-20 right-0 h-1 w-full">
+          <svg
+            className="w-full h-full block"
+            viewBox="0 0 100 4"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            role="progressbar"
+            aria-label="読み込み中"
+          >
+            <rect
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              rx="2"
+              fill="var(--muted)"
+            />
+            <rect
+              x="-40%"
+              y="0"
+              width="40%"
+              height="100%"
+              rx="2"
+              fill="var(--foreground)"
+            >
+              <animate
+                attributeName="x"
+                values="-40%;100%"
+                dur="1.2s"
+                repeatCount="indefinite"
+              />
+            </rect>
+          </svg>
+        </span>
+        <span className="absolute inset-0 z-10 bg-background opacity-70"></span>
+      </>
+    );
+  };
 
   return (
     <GuestLayout>
@@ -21,6 +72,7 @@ const SignupPage: React.FC = () => {
           subtitle="1/3"
           description="メールアドレスを入力してください"
         >
+          {loadingView()}
           <form
             className="flex flex-col items-center w-full gap-8 max-w-sm mx-auto"
             onSubmit={(e) => {
@@ -48,6 +100,7 @@ const SignupPage: React.FC = () => {
           subtitle="2/3"
           description="メールにお送りした認証番号を入力してください"
         >
+          {loadingView()}
           <form
             className="flex flex-col items-center w-full gap-8 max-w-sm mx-auto"
             onSubmit={(e) => {
@@ -86,6 +139,7 @@ const SignupPage: React.FC = () => {
           subtitle="3/3"
           description="登録後でも変更ができます"
         >
+          {loadingView()}
           <form
             className="flex flex-col items-center w-full gap-8 max-w-sm mx-auto"
             onSubmit={handleSubmit}

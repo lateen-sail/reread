@@ -17,6 +17,7 @@ export const useSignup = () => {
   const [step, setStep] = useState<SignupStep>(1);
   const [data, setData] = useState<SignupData>(defaultData);
   const [errors, setErrors] = useState<Partial<SignupData>>({});
+  const [loading, setLoading] = useState(false);
 
   // localStorageから初期値取得
   useEffect(() => {
@@ -64,16 +65,26 @@ export const useSignup = () => {
   };
 
   // 次へ
-  const handleNext = () => {
+  // モックAPI: 1秒遅延
+  const mockApi = () =>
+    new Promise((resolve) => setTimeout(resolve, 1000));
+
+  const handleNext = async () => {
     if (!validate(step)) return;
+    setLoading(true);
+    await mockApi();
     setStep((prev) => (prev < 3 ? ((prev + 1) as SignupStep) : prev));
+    setLoading(false);
   };
 
   // 完了時にmypageへ遷移
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate(3)) return;
+    setLoading(true);
+    await mockApi();
     localStorage.removeItem(LOCAL_KEY);
+    setLoading(false);
     router.push("/mypage");
   };
 
@@ -81,6 +92,7 @@ export const useSignup = () => {
     step,
     data,
     errors,
+    loading,
     handleChange,
     handleNext,
     handleSubmit,
