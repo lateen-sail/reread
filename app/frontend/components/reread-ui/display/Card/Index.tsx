@@ -9,7 +9,7 @@ type Props = CardHeaderProps & {
 
 const Card: React.FC<Props> = ({ children, ...headerProps }) => {
   return (
-    <ShadcnCard className="flex flex-col gap-10 py-12 px-5 rounded-3xl bg-card text-card-foreground shadow-[0_0_0.5rem_0.375rem_rgba(0,0,0,0.02)] w-full max-w-xl">
+    <ShadcnCard className="relative flex flex-col gap-10 py-12 px-5 rounded-3xl bg-card text-card-foreground shadow-[0_0_0.5rem_0.375rem_rgba(0,0,0,0.02)] w-full max-w-xl">
       <CardHeader {...headerProps} />
       {children}
     </ShadcnCard>
