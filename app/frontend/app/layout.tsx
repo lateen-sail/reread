@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Roboto } from "next/font/google";
+import Provider from "@/providers/toast/Provider";
 import "./theme/index.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="jp">
       <body className={`${notoSansJP.variable} ${roboto.variable}`}>
         {children}
+        <Provider />
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { showToast } from "@/providers/toast/api";
 import { SignupStep, SignupData } from "../types";
 
 const LOCAL_KEY = "reread_signup";
@@ -66,8 +67,7 @@ export const useSignup = () => {
 
   // 次へ
   // モックAPI: 1秒遅延
-  const mockApi = () =>
-    new Promise((resolve) => setTimeout(resolve, 1000));
+  const mockApi = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
   const handleNext = async () => {
     if (!validate(step)) return;
@@ -85,6 +85,9 @@ export const useSignup = () => {
     await mockApi();
     localStorage.removeItem(LOCAL_KEY);
     setLoading(false);
+    showToast.success({
+      message: "サインアップしました",
+    });
     router.push("/mypage");
   };
 

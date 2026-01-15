@@ -54,6 +54,11 @@
   --color-header-border: var(--header-border);
   --color-header-menu-background: var(--header-menu-background);
 
+  /* toast */
+  --color-toast-background: var(--toast-background);
+  --color-toast-foreground: var(--toast-foreground);
+  --color-toast-error-background: var(--toast-error-background);
+
   /* button */
   --color-button-primary-background: var(--button-primary-background);
   --color-button-primary-foreground: var(--button-primary-foreground);
@@ -105,6 +110,11 @@
   --header-background: var(--neutral-50);
   --header-border: var(--neutral-300);
   --header-menu-background: var(--neutral-100);
+
+  /* toast */
+  --toast-background: var(--neutral-800);
+  --toast-foreground: var(--neutral-50);
+  --toast-error-background: var(--red-600);
 
   /* button */
   --button-primary-background: var(--yellow-800);
