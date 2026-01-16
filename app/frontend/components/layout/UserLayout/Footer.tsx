@@ -8,7 +8,7 @@ const Footer = () => (
         <ul className="flex gap-4">
           <li>
             <a
-              href="https://www.figma.com/@paglinawan"
+              href="https://www.figma.com/@lateensail"
               target="_blank"
               rel="noreferrer"
               aria-label="Figma profile"
