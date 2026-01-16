@@ -1,14 +1,17 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import { useLogin } from "./hooks/useLogin";
 import GuestLayout from "@/components/layout/GuestLayout";
 import Card from "@/components/reread-ui/display/Card/Index";
 import Input from "@/components/reread-ui/input/Input";
 import InputPassword from "@/components/reread-ui/input/InputPassword";
 import Button from "@/components/reread-ui/action/Button";
+import LinkText from "@/components/reread-ui/action/LinkText";
 
 export default function LoginPage() {
   const { data, errors, loading, handleChange, handleNext } = useLogin();
+  const router = useRouter();
 
   const loadingView = () => {
     if (!loading) return null;
@@ -84,6 +87,10 @@ export default function LoginPage() {
             required
           />
           <Button label="次へ" variant="default" size="lg" type="submit" />
+          <LinkText
+            label="サインアップする"
+            onClick={() => router.push("/signup")}
+          />
         </form>
       </Card>
     </GuestLayout>
