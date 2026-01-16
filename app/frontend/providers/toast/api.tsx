@@ -15,7 +15,7 @@ const buildToast = (type: "default" | "error", options: OptionsType) => {
       role={type === "error" ? "alert" : "status"}
       aria-live={type === "error" ? "assertive" : "polite"}
       className={cn(
-        "relative flex items-center gap-3 px-4 py-2.5",
+        "relative flex items-center gap-3 px-4 py-2.5 rounded-lg",
         type === "default" && "text-toast-foreground bg-toast-background",
         type === "error" && "text-toast-foreground bg-toast-error-background"
       )}
