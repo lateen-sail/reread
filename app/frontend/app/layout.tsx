@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Roboto } from "next/font/google";
+import Script from "next/script";
 import Provider from "@/providers/toast/Provider";
 import "./theme/index.css";
 
@@ -28,6 +29,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XV2QMBNMZM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XV2QMBNMZM');
+          `}
+        </Script>
+      </head>
       <body className={`${notoSansJP.variable} ${roboto.variable}`}>
         {children}
         <Provider />
