@@ -121,21 +121,19 @@ const SignupPage: React.FC = () => {
               onChange={(val) =>
                 handleChange(
                   "otp",
-                  Array.isArray(val) ? val.join("") : String(val)
+                  Array.isArray(val) ? val.join("") : String(val),
                 )
               }
               hasError={!!errors.otp}
               errorMessage={errors.otp}
             />
             <Button label="次へ" variant="default" size="lg" type="submit" />
-            <button
-              type="button"
+            <LinkText
+              label={`${data.email}に再送する`}
+              aria-label="認証番号を再送する"
               className="underline text-xs text-foreground"
               onClick={() => alert("認証番号再送（ダミー）")}
-              aria-label="認証番号を再送する"
-            >
-              {data.email}に再送する
-            </button>
+            />
           </form>
         </Card>
       )}
