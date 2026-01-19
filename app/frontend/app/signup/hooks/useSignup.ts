@@ -52,7 +52,7 @@ export const useSignup = () => {
       if (!data.name) newErrors.name = "ハンドル名を入力してください";
       if (!data.password || data.password.length < 6)
         newErrors.password = "6文字以上のパスワードを入力してください";
-      if (!data.postal || !/^\d{3}-?\d{4}$/.test(data.postal))
+      if (data.postal && !/^\d{3}-?\d{4}$/.test(data.postal))
         newErrors.postal = "郵便番号を正しく入力してください";
     }
     setErrors(newErrors);

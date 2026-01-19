@@ -171,7 +171,6 @@ const SignupPage: React.FC = () => {
                 onChange={(e) => handleChange("postal", e.target.value)}
                 hasError={!!errors.postal}
                 errorMessage={errors.postal}
-                required
                 placeholder="000-0000"
               />
             </div>
