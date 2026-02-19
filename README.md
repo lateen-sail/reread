@@ -1,1 +1,2 @@
-![head](https://github.com/user-attachments/assets/52c5d33a-68b8-439b-b2e1-610ea7ad47b1)
+現在、デザイン刷新中です
+- [資料](https://www.figma.com/deck/weaM9mFZcOP8Ss9T2OMqtL/Presentation?node-id=6-291&t=Di9isU9aFNAvC1As-1)
